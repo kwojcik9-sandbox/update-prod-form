@@ -1,0 +1,22 @@
+{
+    "filesToModify": {
+        "CanvasManifest.json": [
+            "Properties.Name",
+            "PublishInfo.AppName",
+            "Properties.Id",
+            "Properties.FileID"
+        ],
+        "DataSources/Test1.json": [
+            "DatasetName"
+        ],
+        "Entropy/Entropy.json": [
+            "LocalConnectionIDReferences"
+        ]
+    },
+    "blacklist":[
+        "ComponentReferences.json",
+        "Other",
+        "Entropy",
+        "Connections"
+    ]
+}

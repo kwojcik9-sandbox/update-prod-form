@@ -1,13 +1,10 @@
 name: 'Update PROD Power Apps form'
 description: 'Action for updating Power Apps SharePoint form'
-inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Update
+        uses: ./ # Uses an action in the root directory
 runs:
   using: 'node16'
-  main: 'index.js'
+  main: 'dist/index.js'

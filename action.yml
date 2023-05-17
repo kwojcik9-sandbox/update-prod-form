@@ -1,10 +1,11 @@
-name: 'Update PROD Power Apps form'
-description: 'Action for updating Power Apps SharePoint form'
-  steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Update
-        uses: ./ # Uses an action in the root directory
+---
+name: Update PROD Power Apps form
+description: Action for updating Power Apps SharePoint form
+steps:
+  - name: Checkout
+    uses: actions/checkout@v3
+  - name: Update
+    uses: ./
 runs:
-  using: 'node16'
-  main: 'dist/index.js'
+  using: node16
+  main: dist/index.js

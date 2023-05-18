@@ -51,7 +51,28 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 const fs = __nccwpck_require__(147)
-const config = JSON.parse(fs.readFileSync(`./file-config.json`, 'utf8'));
+const config = {
+    "filesToModify": {
+        "CanvasManifest.json": [
+            "Properties.Name",
+            "PublishInfo.AppName",
+            "Properties.Id",
+            "Properties.FileID"
+        ],
+        "DataSources/Test1.json": [
+            "DatasetName"
+        ],
+        "Entropy/Entropy.json": [
+            "LocalConnectionIDReferences"
+        ]
+    },
+    "blacklist": [
+        "ComponentReferences.json",
+        "Other",
+        "Entropy",
+        "Connections"
+    ]
+}
 
 const pathDev = ".././alm/dev/"
 const pathProd = ".././alm/prod/"

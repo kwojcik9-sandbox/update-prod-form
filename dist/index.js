@@ -75,7 +75,7 @@ const config = {
 }
 
 const pathDev = ".././alm/dev/"
-const pathProd = ".././alm/prod/"
+const pathProd = ".././alm/PROD/"
 
 class FileJSON {
     constructor(path, fileName) {
@@ -148,6 +148,7 @@ const extractFolder = function (path, fileName, direction) {
         fileName = `${fileName}/`
     }
     var items = fs.readdirSync(`${path}${fileName}`)
+    console.log(items)
     items.forEach(i => {
         let file = `${fileName}${i}`
         if (config.blacklist.includes(file)) {
